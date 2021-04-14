@@ -1,0 +1,151 @@
+// @import './variables-old.scss';
+@import './element-ui-old.scss';
+// @import './sidebar-old.scss';
+
+
+// 新版本样式
+@import './wjhMain.scss';
+@import './transition.scss';
+@import './mixin.scss';
+@import './iconfont.scss';
+@import './variables.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+
+body {
+  height: 100%;
+  // 减去左边菜单
+  min-width: 920px;
+  overflow: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  // font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+label {
+  font-weight: 700;
+  // font-size: 12px!important;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 8px;
+  height: 85%;
+}
+
+
+.app-main{
+background-color: #ffffff;
+padding-right:10px
+}
+.content{
+padding: 8px 8px 0px 8px;
+}
+.content .search {
+background-color: #ffffff;
+}
+
+.content form {
+margin-left: 0px;
+}
+.content .table {
+background-color: #ffffff;
+}
+
+.content .el-form-item{
+margin-bottom: 16px;
+margin-top:16px;
+}
+.content .search .el-form-item {
+margin-bottom: 1px;
+margin-top: 5px;
+}
+
+.content .base-pagination {
+  margin-top: 12px;
+  background: #f0f1f2;
+}
+
+
+
+
+
+
+.search-date-group{
+display: table-cell ;width: 50% !important;
+}
+.operate-span{
+  color:#1890FF;
+  cursor: pointer;
+}
+.operate-info{
+color:#909399;
+}
+
+.app-container,.table .success {
+color: $success;
+}
+.app-container,.table .danger {
+color: $danger;
+}
+.app-container,.table .info {
+color: $info;
+}
+
+@media (max-height:624px) {
+  .app-container {
+      height: 75%;
+  }
+}
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}

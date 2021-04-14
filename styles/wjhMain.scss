@@ -1,0 +1,574 @@
+// 该样式是新版公共样式布局，权重比较高，别轻易乱改！！！
+@import "config.scss";
+
+// 主content布局样式
+.wjhContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // padding-right: 10px;
+  overflow: hidden;
+
+  // 内容 ，搜索头以下
+  .contentBox {
+    flex: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .vxe-toolbar {
+      padding-left: 0;
+      background: $blockBackground;
+      border: 1px solid $lineColor;
+      border-bottom: none;
+      flex-grow: 1;
+    }
+
+    // 内容中的表格
+    .tableBox {
+      height: 100%;
+      margin-bottom: -0.8%;
+    }
+
+    // 底部
+    .footerBox {
+      flex-grow: 1;
+      height: auto;
+      margin-top: 3px;
+
+      .el-pagination {
+        background: $blockBackground;
+        border: 1px solid $lineColor;
+        padding: 2px 8px;
+        margin: 0;
+        position: relative;
+        z-index: 666;
+      }
+
+      .footerHandleBox {
+        background: #e0efff;
+        padding: 0px 8px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        // .el-button+.el-button {
+        //   margin: 0;
+        // }
+        .el-button {
+          margin: 4px 0;
+        }
+
+        .text {
+          font-size: 12px;
+          margin-right: 20px;
+        }
+
+        .left {
+          float: left;
+        }
+
+        .right {
+          flex-grow: 0 !important;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  // 表格相关样式-----
+  .vxeToolbarBox {
+    background: $blockBackground;
+
+    .el-col {
+      height: auto;
+    }
+
+    .customForm {
+      .el-form-item {
+        margin-bottom: 0 !important;
+      }
+
+      .el-input__inner {
+        height: 24px !important;
+      }
+
+      .el-form-item__label {
+        color: #000;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 0 6px 0 0;
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .sub {
+        background: $primary;
+        color: #fff;
+        font-size: 12px;
+        margin-left: 4px;
+        margin-top: 3px;
+      }
+
+      .el-button {
+        padding: 4px 8px;
+      }
+
+      // .is-disabled{
+      //   opacity: .5;
+      // }
+    }
+
+    .vxe-body--column {
+      padding: 2px 0 !important;
+    }
+
+    .vxe-button--wrapper {
+      display: flex;
+      align-items: center;
+
+      .right {
+        flex: 1;
+        text-align: right;
+      }
+    }
+
+    .el-checkbox__label {
+      padding-left: 2px;
+      font-size: 12px;
+      color: #000;
+    }
+
+    .el-checkbox {
+      margin-right: 16px;
+    }
+  }
+
+  span .el-button--text {
+    color: #000;
+    border: none;
+    background: none;
+    font-size: 12px;
+    margin: 0;
+
+    .iconfont {
+      color: $primary;
+      margin-right: 2px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  //弹性盒子
+  .flexBox-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // 改饿了么tab样式
+  .el-tabs__header {
+    padding: 0 0 2px 0;
+    margin: 0 !important;
+
+    .el-tabs__nav-wrap::after {
+      height: 1px;
+      border-color: #ddd
+    }
+
+    .el-tabs__item {
+      font-size: 12px;
+      height: 32px;
+      color: #787878;
+    }
+
+    .el-tabs__item.is-active {
+      color: $primary;
+    }
+  }
+
+  .vxe-toolbar {
+    .vxe-custom--wrapper {
+      background: #fff !important;
+      border-radius: 0
+    }
+
+    .is--active {
+      background: #fff !important;
+      border-radius: 0;
+
+      .vxe-tools--operate-custom-btn {
+        background: #fff !important;
+        border-radius: 0;
+      }
+    }
+
+    .vxe-tools--operate-custom-btn:hover {
+      background: #fff !important;
+      border-radius: 0;
+    }
+
+    .vxe-tools--operate-btn:hover {
+      background: #fff !important;
+      border-radius: 0;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid $primary;
+    padding: 2px 0;
+    color: $primary
+  }
+
+  a>.el-button {
+    user-select: unset;
+  }
+
+  a:hover {
+    color: $primary
+  }
+}
+
+.vxe-body--row .vxe-body--column.col--selected {
+  background: none;
+  // border: 2px solid $primary;
+}
+
+// 表格选中高亮颜色
+.el-table__body tr.current-row>td {
+  background-color: #9ACFFF !important;
+}
+
+.el-checkbox__inner {
+  border-color: #bfbfbf !important;
+}
+
+.vxe-table {
+  .vxe-body--row.row--current {
+    background-color: #9ACFFF;
+  }
+
+  .vxe-checkbox--icon:before {
+    border-color: #bfbfbf !important;
+  }
+}
+
+// 表格顶部操作栏的
+.vxe-toolbar {
+  height: auto !important;
+}
+
+// 右键样式
+.vxe-table--context-menu-wrapper {
+  background: #3c3c3c !important;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  padding: 10px 28px;
+  text-align: center;
+
+  .vxe-context-menu--option-wrapper {
+    border: none;
+
+    li {
+      margin: 0;
+      border: none;
+    }
+  }
+
+  .vxe-context-menu--link {
+    color: #fff !important;
+    padding: 0;
+    width: auto;
+  }
+
+  .link--active {
+    background: none !important;
+    border: none;
+
+    .vxe-context-menu--link {
+      color: $primary !important;
+      margin: 0;
+    }
+  }
+}
+
+.primary {
+  color: $primary !important;
+}
+
+.success {
+  color: $success !important;
+}
+
+.warning {
+  color: $warning !important;
+}
+
+.danger {
+  color: $danger !important;
+}
+
+.error {
+  color: $error !important;
+}
+
+// 更小按钮  24px
+.minimal {
+  padding: 4px 8px !important;
+  font-size: 12px;
+
+  span {
+    font-size: 12px;
+  }
+}
+
+// 表格样式 统一改掉吧，不放在类名里控制了，有些页面来不及引入新UI
+.el-table td,
+.el-table th.is-leaf,
+.el-table--border,
+.el-table--group {
+  border-color: $lineColor !important;
+}
+
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+  background-color: $lineColor !important;
+}
+
+.vxe-table.border--full .vxe-header--column {
+  background: #f1f4f6 !important
+}
+
+.vxe-table .vxe-body--column:not(.col--ellipsis) {
+  padding: 0;
+}
+
+.vxe-table.border--full .vxe-body--column {
+  background-image: linear-gradient($lineColor, $lineColor), linear-gradienWt($lineColor, $lineColor) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($lineColor), to($lineColor)), -webkit-gradient(linear, left top, left bottom, from($lineColor), to($lineColor)) !important;
+  background-repeat: no-repeat !important;
+  background-size: 1px 100%, 100% 1px !important;
+  background-position: 100% 0, 100% 100% !important;
+}
+
+.vxe-table .vxe-table--border-line:before {
+  border-left: 1px solid $lineColor !important;
+}
+
+.vxe-table .vxe-table--border-line:after {
+  border-right: 1px solid $lineColor !important;
+}
+
+.vxe-table .vxe-table--border-line {
+  border: 1px solid $lineColor !important;
+}
+
+.vxe-table:before {
+  border-top: 1px solid $lineColor !important;
+}
+
+.vxe-table:after {
+  border-bottom: 1px solid $lineColor !important;
+}
+
+// 日期控件放大行高有问题，暂时先改这样
+.el-range-editor--mini {
+  margin: -1px;
+}
+
+.el-cascader--mini {
+  margin: -1px;
+}
+
+.vxe-header--column {
+  border-right: 1px solid $lineColor !important;
+}
+
+// 表单里的checkbox
+.vxe-checkbox--icon:before {
+  border: 1px solid $lineColor !important;
+}
+.is--checked{
+  .vxe-checkbox--icon:before {
+    border: 1px solid $primary !important;
+  }
+}
+.is--indeterminate{
+  .vxe-checkbox--icon:before {
+    border: 1px solid $primary !important;
+  }
+}
+// 设置的popover 黑色版
+.popoverBox{
+  min-width: auto !important;
+  background: #2E3444 !important;
+  color: #fff;
+  z-index: 1998 !important;
+  border-color:#2E3444 !important;
+  span {
+    color: #fff
+  }
+  .popper__arrow::after {
+    border-bottom-color: #2E3444 !important;
+    border-right-color:#2E3444 !important;
+  }
+}
+.menuPopoverBox{
+  background: #2C3754 !important;
+  border-radius: 0 4px 4px 0 !important;
+  max-width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.popperBox {
+  min-width: auto !important;
+  background: #3c3c3c !important;
+  color: #fff;
+  z-index: 1998 !important;
+
+  span {
+    color: #fff
+  }
+
+  .popper__arrow::after {
+    border-bottom-color: #3c3c3c !important;
+  }
+
+  .el-radio__inner {
+    background-color: rgba(#fff, 0.1);
+  }
+
+  .el-radio__input.is-checked .el-radio__inner {
+    background: $primary !important;
+
+    .el-radio__inner::after {
+      display: none !important;
+    }
+  }
+
+  // border-radius: 2px;
+  // box-shadow: none;
+  // border: none;
+  // text-align: center;
+  .el-radio__inner::after {
+    width: 10px;
+    height: 10px;
+    background-color: rgba($primary, 0.5);
+    border: 2px solid #3c3c3c;
+  }
+}
+
+.link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 18px;
+  color: $primary;
+  border-bottom: 1px solid $primary;
+}
+
+// 统一改vxe表格里的input,修复输入框变化页面跳动bug
+.vxe-table {
+  .vxe-default-input {
+    height: 24px !important;
+    width: 90%;
+  }
+
+  .dbInput {
+    width: 40%
+  }
+
+  .el-tag {
+    max-height: 28px !important;
+  }
+}
+
+.el-input__inner {
+  border-color: $lineColor !important;
+}
+
+// 规格样式
+.spec {
+  background-color: rgba(#1890FF, .16);
+  color: #1890FF;
+  padding: 1px 8px;
+}
+// 拖拽按钮
+.rowDropBtn {
+  cursor: move;
+  font-size: 12px;
+  padding: 5px;
+}
+body {
+  // 居中弹框
+  .el-dialog {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // height:80% !important;
+    max-height: calc(100% - 60px);
+    max-width: calc(100% - 60px);
+  }
+  // 全局统一弹框样式
+  .el-dialog .el-dialog__body {
+    flex: 1;
+    overflow: auto;
+    padding: 16px;
+  }
+  .el-dialog__headerbtn {
+    top: 10px;
+    right: 15px;
+    padding: 0;
+  }
+  .el-dialog__header {
+    background: #f0f1f2;
+    padding: 6px 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    // padding: 15px;
+    span,
+    .el-dialog__close {
+      color: #000;
+      font-size: 14px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  .el-dialog__body {
+    padding: 24px 16px;
+    overflow: auto;
+  }
+  .el-dialog__footer {
+    padding: 4px 19px 14px 19px;
+    .el-button{
+      padding: 7px 15px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+  }
+}
+.displayNone{
+  display: none;
+}
+.el-popper[x-placement^="bottom"] .popper__arrow::after{
+  border-bottom-color:#1f293d !important
+}
+.menuPopper{
+  color:#fff
+}
+.el-dialog__wrapper{
+  background:rgba(#000, .5)
+}
+.v-modal{
+  display: none !important;
+}
